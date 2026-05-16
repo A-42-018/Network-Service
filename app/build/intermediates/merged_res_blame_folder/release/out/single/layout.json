@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.alifblocker.app-mergeReleaseResources-38:/layout/activity_main.xml",
+        "source": "com.alifblocker.app-main-40:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-mergeReleaseResources-38:/layout/activity_pin_setup.xml",
+        "source": "com.alifblocker.app-main-40:/layout/activity_pin_setup.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-mergeReleaseResources-38:/layout/activity_blocked.xml",
+        "source": "com.alifblocker.app-main-40:/layout/activity_blocked.xml"
+    }
+]

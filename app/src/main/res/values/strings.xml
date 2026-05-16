@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Network Service</string>
+    <string name="blocker_on">Protection: ON</string>
+    <string name="blocker_off">Protection: OFF</string>
+</resources>

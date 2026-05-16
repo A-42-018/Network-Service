@@ -1,0 +1,4 @@
+#Sat May 16 13:49:50 BDT 2026
+base.0=/Users/alifmahmud/FM 01/Developed by Alif/AdultBlocker/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

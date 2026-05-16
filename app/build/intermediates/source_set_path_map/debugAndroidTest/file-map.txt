@@ -1,0 +1,4 @@
+com.alifblocker.test.app-androidTest-0 /Users/alifmahmud/FM 01/Developed by Alif/AdultBlocker/app/build/generated/res/resValues/androidTest/debug
+com.alifblocker.test.app-mergeDebugAndroidTestResources-1 /Users/alifmahmud/FM 01/Developed by Alif/AdultBlocker/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.alifblocker.test.app-mergeDebugAndroidTestResources-2 /Users/alifmahmud/FM 01/Developed by Alif/AdultBlocker/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.alifblocker.test.app-merged_res-3 /Users/alifmahmud/FM 01/Developed by Alif/AdultBlocker/app/build/intermediates/merged_res/debugAndroidTest
