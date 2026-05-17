@@ -1,11 +1,7 @@
 [
     {
-        "merged": "com.alifblocker.app-merged_res-4:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.alifblocker.app-main-6:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.alifblocker.app-merged_res-4:/drawable_ic_shield.xml.flat",
-        "source": "com.alifblocker.app-main-6:/drawable/ic_shield.xml"
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_glow_circle_purple.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/glow_circle_purple.xml"
     },
     {
         "merged": "com.alifblocker.app-merged_res-4:/mipmap-mdpi_ic_launcher.webp.flat",
@@ -16,16 +12,72 @@
         "source": "com.alifblocker.app-main-6:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.alifblocker.app-main-6:/mipmap-xhdpi/ic_launcher_foreground.webp"
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_icon_bg_purple.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/icon_bg_purple.xml"
     },
     {
         "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
         "source": "com.alifblocker.app-main-6:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
     },
     {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_info_card_bg.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/info_card_bg.xml"
+    },
+    {
         "merged": "com.alifblocker.app-merged_res-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "com.alifblocker.app-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.alifblocker.app-main-6:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.alifblocker.app-main-6:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/layout_activity_main.xml.flat",
+        "source": "com.alifblocker.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_pill_bg.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/pill_bg.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.alifblocker.app-main-6:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_glow_circle.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/glow_circle.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_hero_card_bg.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/hero_card_bg.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.alifblocker.app-main-6:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_ic_shield.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/ic_shield.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_icon_bg_green.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/icon_bg_green.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.alifblocker.app-main-6:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_glass_card_bg.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/glass_card_bg.xml"
+    },
+    {
+        "merged": "com.alifblocker.app-merged_res-4:/drawable_glass_circle.xml.flat",
+        "source": "com.alifblocker.app-main-6:/drawable/glass_circle.xml"
     },
     {
         "merged": "com.alifblocker.app-merged_res-4:/mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -48,24 +100,8 @@
         "source": "com.alifblocker.app-main-6:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.alifblocker.app-main-6:/mipmap-xxhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.alifblocker.app-merged_res-4:/layout_activity_main.xml.flat",
-        "source": "com.alifblocker.app-main-6:/layout/activity_main.xml"
-    },
-    {
-        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.alifblocker.app-main-6:/mipmap-xxxhdpi/ic_launcher.webp"
-    },
-    {
         "merged": "com.alifblocker.app-merged_res-4:/layout_activity_blocked.xml.flat",
         "source": "com.alifblocker.app-main-6:/layout/activity_blocked.xml"
-    },
-    {
-        "merged": "com.alifblocker.app-merged_res-4:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.alifblocker.app-main-6:/mipmap-xxhdpi/ic_launcher_foreground.webp"
     },
     {
         "merged": "com.alifblocker.app-merged_res-4:/drawable_ic_stop.xml.flat",

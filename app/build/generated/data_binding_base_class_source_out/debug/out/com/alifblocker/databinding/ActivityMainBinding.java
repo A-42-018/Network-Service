@@ -4,6 +4,7 @@ package com.alifblocker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -33,29 +34,65 @@ public final class ActivityMainBinding implements ViewBinding {
   public final CardView cardStatus;
 
   @NonNull
+  public final View dividerCustomDomains;
+
+  @NonNull
   public final TextInputEditText etCustomDomain;
+
+  @NonNull
+  public final LinearLayout layoutCustomDomainList;
+
+  @NonNull
+  public final LinearLayout layoutCustomDomainsHeader;
 
   @NonNull
   public final SwitchMaterial switchBlocker;
 
   @NonNull
+  public final TextView tvBlockedCount;
+
+  @NonNull
+  public final TextView tvCustomCount;
+
+  @NonNull
   public final TextView tvDomainCount;
+
+  @NonNull
+  public final TextView tvPinBadge;
 
   @NonNull
   public final TextView tvStatus;
 
+  @NonNull
+  public final TextView tvStatusSub;
+
+  @NonNull
+  public final TextView tvUptime;
+
   private ActivityMainBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnAddDomain,
       @NonNull MaterialButton btnSetPin, @NonNull CardView cardStatus,
-      @NonNull TextInputEditText etCustomDomain, @NonNull SwitchMaterial switchBlocker,
-      @NonNull TextView tvDomainCount, @NonNull TextView tvStatus) {
+      @NonNull View dividerCustomDomains, @NonNull TextInputEditText etCustomDomain,
+      @NonNull LinearLayout layoutCustomDomainList, @NonNull LinearLayout layoutCustomDomainsHeader,
+      @NonNull SwitchMaterial switchBlocker, @NonNull TextView tvBlockedCount,
+      @NonNull TextView tvCustomCount, @NonNull TextView tvDomainCount,
+      @NonNull TextView tvPinBadge, @NonNull TextView tvStatus, @NonNull TextView tvStatusSub,
+      @NonNull TextView tvUptime) {
     this.rootView = rootView;
     this.btnAddDomain = btnAddDomain;
     this.btnSetPin = btnSetPin;
     this.cardStatus = cardStatus;
+    this.dividerCustomDomains = dividerCustomDomains;
     this.etCustomDomain = etCustomDomain;
+    this.layoutCustomDomainList = layoutCustomDomainList;
+    this.layoutCustomDomainsHeader = layoutCustomDomainsHeader;
     this.switchBlocker = switchBlocker;
+    this.tvBlockedCount = tvBlockedCount;
+    this.tvCustomCount = tvCustomCount;
     this.tvDomainCount = tvDomainCount;
+    this.tvPinBadge = tvPinBadge;
     this.tvStatus = tvStatus;
+    this.tvStatusSub = tvStatusSub;
+    this.tvUptime = tvUptime;
   }
 
   @Override
@@ -103,9 +140,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.dividerCustomDomains;
+      View dividerCustomDomains = ViewBindings.findChildViewById(rootView, id);
+      if (dividerCustomDomains == null) {
+        break missingId;
+      }
+
       id = R.id.etCustomDomain;
       TextInputEditText etCustomDomain = ViewBindings.findChildViewById(rootView, id);
       if (etCustomDomain == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutCustomDomainList;
+      LinearLayout layoutCustomDomainList = ViewBindings.findChildViewById(rootView, id);
+      if (layoutCustomDomainList == null) {
+        break missingId;
+      }
+
+      id = R.id.layoutCustomDomainsHeader;
+      LinearLayout layoutCustomDomainsHeader = ViewBindings.findChildViewById(rootView, id);
+      if (layoutCustomDomainsHeader == null) {
         break missingId;
       }
 
@@ -115,9 +170,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvBlockedCount;
+      TextView tvBlockedCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvBlockedCount == null) {
+        break missingId;
+      }
+
+      id = R.id.tvCustomCount;
+      TextView tvCustomCount = ViewBindings.findChildViewById(rootView, id);
+      if (tvCustomCount == null) {
+        break missingId;
+      }
+
       id = R.id.tvDomainCount;
       TextView tvDomainCount = ViewBindings.findChildViewById(rootView, id);
       if (tvDomainCount == null) {
+        break missingId;
+      }
+
+      id = R.id.tvPinBadge;
+      TextView tvPinBadge = ViewBindings.findChildViewById(rootView, id);
+      if (tvPinBadge == null) {
         break missingId;
       }
 
@@ -127,8 +200,22 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvStatusSub;
+      TextView tvStatusSub = ViewBindings.findChildViewById(rootView, id);
+      if (tvStatusSub == null) {
+        break missingId;
+      }
+
+      id = R.id.tvUptime;
+      TextView tvUptime = ViewBindings.findChildViewById(rootView, id);
+      if (tvUptime == null) {
+        break missingId;
+      }
+
       return new ActivityMainBinding((ScrollView) rootView, btnAddDomain, btnSetPin, cardStatus,
-          etCustomDomain, switchBlocker, tvDomainCount, tvStatus);
+          dividerCustomDomains, etCustomDomain, layoutCustomDomainList, layoutCustomDomainsHeader,
+          switchBlocker, tvBlockedCount, tvCustomCount, tvDomainCount, tvPinBadge, tvStatus,
+          tvStatusSub, tvUptime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

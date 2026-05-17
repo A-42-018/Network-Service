@@ -2998,6 +2998,11 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable glass_card_bg
+drawable glass_circle
+drawable glow_circle
+drawable glow_circle_purple
+drawable hero_card_bg
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -3013,6 +3018,9 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable ic_shield
 drawable ic_stop
+drawable icon_bg_green
+drawable icon_bg_purple
+drawable info_card_bg
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
 drawable m3_bottom_sheet_drag_handle
@@ -3084,6 +3092,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pill_bg
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3250,6 +3259,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id dividerCustomDomains
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3326,6 +3336,8 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutCustomDomainList
+id layoutCustomDomainsHeader
 id left
 id leftToRight
 id legacy
@@ -3568,10 +3580,15 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvBlockedCount
 id tvBlockedDomain
+id tvCustomCount
 id tvDomainCount
+id tvPinBadge
 id tvPinStatus
 id tvStatus
+id tvStatusSub
+id tvUptime
 id unchecked
 id uniform
 id unlabeled

@@ -10,131 +10,212 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="18dp">
 
-        <!-- Header -->
-        <TextView
+        <!-- ── HEADER ─────────────────────────────────── -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Network Service"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
+            android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="8dp"/>
+            android:paddingTop="12dp"
+            android:paddingBottom="20dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DNS-based adult content protection"
-            android:textSize="13sp"
-            android:textColor="#AAAAAA"
-            android:gravity="center"
-            android:layout_marginBottom="24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛡️"
+                android:textSize="44sp"
+                android:layout_marginBottom="8dp"/>
 
-        <!-- Status Card -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Network Service"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:letterSpacing="-0.02"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DNS-based content protection"
+                android:textSize="12sp"
+                android:textColor="#66FFFFFF"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- ── STATUS CARD ────────────────────────────── -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp"
-            android:layout_marginBottom="20dp">
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/card_inactive"
+            android:layout_marginBottom="14dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🪴"
+                    android:textSize="52sp"
+                    android:layout_marginBottom="12dp"/>
 
                 <TextView
                     android:id="@+id/tvStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="⚠️ Protection: OFF"
-                    android:textSize="22sp"
+                    android:text="⚠️  Protection: OFF"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp"/>
+                    android:textColor="@color/red"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvStatusSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap the switch to activate"
+                    android:textSize="12sp"
+                    android:textColor="#66FFFFFF"
+                    android:layout_marginBottom="22dp"/>
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/switchBlocker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Enable Blocker"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
+                    android:textColor="#CCFFFFFF"
+                    android:textSize="15sp"
                     app:thumbTint="@color/white"
-                    app:trackTint="@color/switch_track"/>
+                    app:trackTint="@color/switch_track"
+                    android:layout_marginBottom="24dp"/>
 
-                <TextView
-                    android:id="@+id/tvDomainCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Blocking 0 domains"
-                    android:textColor="#AAAAAA"
-                    android:textSize="13sp"
-                    android:layout_marginTop="12dp"/>
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Custom Domain Card -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="@color/card_bg"
-            android:layout_marginBottom="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="➕ Block Custom Domain"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="12dp"/>
-
-                <com.google.android.material.textfield.TextInputLayout
+                <!-- Stats row -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="e.g. example.com"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_marginBottom="12dp">
+                    android:orientation="horizontal"
+                    android:weightSum="3">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etCustomDomain"
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:inputType="textUri"
-                        android:textColor="@color/white"/>
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/pill_bg"
+                        android:padding="10dp"
+                        android:layout_marginEnd="6dp">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <TextView
+                            android:id="@+id/tvDomainCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="156"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnAddDomain"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Block This Domain"
-                    app:backgroundTint="@color/accent"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Domains"
+                            android:textSize="10sp"
+                            android:textColor="#66FFFFFF"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/pill_bg"
+                        android:padding="10dp"
+                        android:layout_marginEnd="6dp">
+
+                        <TextView
+                            android:id="@+id/tvBlockedCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Blocked"
+                            android:textSize="10sp"
+                            android:textColor="#66FFFFFF"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/pill_bg"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvUptime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Uptime"
+                            android:textSize="10sp"
+                            android:textColor="#66FFFFFF"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Parental Lock Card -->
+        <!-- ── SECTION LABEL ──────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CUSTOM RULES"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#55FFFFFF"
+            android:letterSpacing="0.12"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- ── CUSTOM DOMAIN CARD ─────────────────────── -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
             app:cardBackgroundColor="@color/card_bg"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="14dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -145,45 +226,200 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🔒 Parental PIN Lock"
+                    android:text="➕  Block Custom Domain"
                     android:textColor="@color/white"
-                    android:textSize="17sp"
+                    android:textSize="15sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="14dp"/>
+
+                <!-- Input + Add button row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="e.g. example.com"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="14dp"
+                        app:boxCornerRadiusTopEnd="14dp"
+                        app:boxCornerRadiusBottomStart="14dp"
+                        app:boxCornerRadiusBottomEnd="14dp"
+                        android:layout_marginEnd="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etCustomDomain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddDomain"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:text="+"
+                        android:textSize="22sp"
+                        android:padding="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        app:cornerRadius="16dp"
+                        app:backgroundTint="@color/accent"/>
+
+                </LinearLayout>
+
+                <!-- ── Divider — only visible when list has items ── -->
+                <View
+                    android:id="@+id/dividerCustomDomains"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1AFFFFFF"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"/>
+
+                <!-- ── List header — only visible when list has items ── -->
+                <LinearLayout
+                    android:id="@+id/layoutCustomDomainsHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="YOUR BLOCKED DOMAINS"
+                        android:textColor="#66FFFFFF"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.10"/>
+
+                    <TextView
+                        android:id="@+id/tvCustomCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 added"
+                        android:textColor="#44FFFFFF"
+                        android:textSize="10sp"/>
+
+                </LinearLayout>
+
+                <!-- ── Domain rows added here dynamically ── -->
+                <LinearLayout
+                    android:id="@+id/layoutCustomDomainList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ── SECTION LABEL ──────────────────────────── -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SECURITY"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#55FFFFFF"
+            android:letterSpacing="0.12"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- ── PIN LOCK CARD ──────────────────────────── -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#1A5E35B1"
+            android:layout_marginBottom="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🔒  Parental PIN Lock"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvPinBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✓ Active"
+                        android:textSize="11sp"
+                        android:textColor="#81C784"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Set a PIN to prevent kids from disabling the blocker"
-                    android:textColor="#AAAAAA"
-                    android:textSize="13sp"
-                    android:layout_marginBottom="12dp"/>
+                    android:text="Set a PIN so the blocker cannot be disabled without your permission."
+                    android:textColor="#88FFFFFF"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="3dp"
+                    android:layout_marginBottom="16dp"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSetPin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Setup PIN"
+                    android:textSize="14sp"
+                    app:cornerRadius="14dp"
                     app:backgroundTint="#5E35B1"/>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Info Card -->
+        <!-- ── INFO CARD ──────────────────────────────── -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#1A1A2E"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#0AFFFFFF"
             android:layout_marginBottom="8dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="ℹ️  This app uses a local VPN to filter network traffic. No data leaves your device."
-                android:textColor="#9E9E9E"
-                android:textSize="12sp"
+                android:text="ℹ️  DNS filtering only. No browsing data ever leaves your device."
+                android:textColor="#44FFFFFF"
+                android:textSize="11.5sp"
                 android:lineSpacingExtra="3dp"/>
 
         </androidx.cardview.widget.CardView>
