@@ -35,9 +35,21 @@
         android:theme="@style/Theme.AdultBlocker" >
 
         <!-- Main Activity -->
+        <service
+            android:name="com.alifblocker.service.BlockerTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_shield"
+            android:label="Adult Blocker"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <activity
             android:name="com.alifblocker.ui.MainActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:launchMode="singleTop" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

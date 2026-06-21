@@ -223,13 +223,36 @@
                 android:orientation="vertical"
                 android:padding="20dp">
 
+                <!-- Title row with icon -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="4dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_globe"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@null"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Block Custom Domain"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="➕  Block Custom Domain"
-                    android:textColor="@color/white"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
+                    android:text="Add any site you want to block by domain name."
+                    android:textColor="#77FFFFFF"
+                    android:textSize="12sp"
                     android:layout_marginBottom="14dp"/>
 
                 <!-- Input + Add button row -->
@@ -237,18 +260,30 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:baselineAligned="false"
+                    android:gravity="top">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:id="@+id/tilCustomDomain"
                         android:hint="e.g. example.com"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         app:boxCornerRadiusTopStart="14dp"
                         app:boxCornerRadiusTopEnd="14dp"
                         app:boxCornerRadiusBottomStart="14dp"
                         app:boxCornerRadiusBottomEnd="14dp"
+                        app:boxStrokeColor="@color/accent"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintTextColor="@color/accent"
+                        android:textColorHint="#66FFFFFF"
+                        app:helperTextEnabled="true"
+                        app:helperText="Enter a hostname like sub.example.com"
+                        app:helperTextTextColor="#55FFFFFF"
+                        app:endIconMode="clear_text"
+                        app:endIconTint="#88FFFFFF"
                         android:layout_marginEnd="10dp">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -256,24 +291,56 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textUri"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:maxLength="253"
                             android:textColor="@color/white"
-                            android:textSize="13sp"/>
+                            android:textSize="14sp"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnAddDomain"
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
-                        android:text="+"
-                        android:textSize="22sp"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="6dp"
                         android:padding="0dp"
                         android:insetTop="0dp"
                         android:insetBottom="0dp"
+                        android:contentDescription="Add domain"
+                        app:icon="@drawable/ic_plus"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="24dp"
+                        app:iconTint="@color/white"
                         app:cornerRadius="16dp"
-                        app:backgroundTint="@color/accent"/>
+                        app:backgroundTint="@color/accent"
+                        app:rippleColor="#33FFFFFF"/>
 
                 </LinearLayout>
+
+                <!-- ── Cache-delay tip ── -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tip: already-visited sites may take a moment to start blocking — the system DNS cache or browser cache must expire first."
+                    android:textColor="#55FFFFFF"
+                    android:textSize="11sp"
+                    android:lineSpacingExtra="2dp"
+                    android:layout_marginTop="6dp"/>
+
+                <!-- ── Empty state ── -->
+                <TextView
+                    android:id="@+id/tvCustomEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="No custom domains yet — add one above."
+                    android:textColor="#55FFFFFF"
+                    android:textSize="12sp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="6dp"/>
 
                 <!-- ── Divider — only visible when list has items ── -->
                 <View
@@ -281,8 +348,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#1AFFFFFF"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="10dp"
                     android:visibility="gone"/>
 
                 <!-- ── List header — only visible when list has items ── -->
@@ -292,7 +359,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:layout_marginBottom="6dp"
+                    android:layout_marginBottom="8dp"
                     android:visibility="gone">
 
                     <TextView
@@ -300,7 +367,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="YOUR BLOCKED DOMAINS"
-                        android:textColor="#66FFFFFF"
+                        android:textColor="#88FFFFFF"
                         android:textSize="10sp"
                         android:textStyle="bold"
                         android:letterSpacing="0.10"/>
@@ -310,8 +377,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0 added"
-                        android:textColor="#44FFFFFF"
-                        android:textSize="10sp"/>
+                        android:textColor="@color/accent"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:background="@drawable/pill_bg"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"/>
 
                 </LinearLayout>
 
